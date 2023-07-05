@@ -1,0 +1,39 @@
+<section>
+    <div class="container">
+        <app-toggle></app-toggle>
+        <div *ngIf="!createResult"  class="form">
+            <h1>Edit Profile</h1>
+
+            <div class="form-group">
+                <label>City</label>
+                <input type="text" [(ngModel)]="this.service.actualEdit.city" required>
+            </div>
+            <div class="form-group">
+                <label>Skills</label>
+                <input type="text"  [(ngModel)]="this.service.actualEdit.skills" required>
+            </div>
+            <div class="form-group">
+                <label>Introduction</label>
+                <input type="text"  [(ngModel)]="this.service.actualEdit.introduction" required>
+            </div>
+           
+            <div class="form-group">
+               <button (click)="saveEdited()" >Save Profile</button>
+            </div>
+            <div class="create-if-error" [ngClass]="{'create-err': createError}">
+                <p><span></span> Please fill out all fields!</p>
+            </div>
+        </div>
+        <div *ngIf="createSuccess" class="create-if-success" [ngClass]="{'create-succ': createSuccess}">
+            <div class="gradient-container">
+                <p class="gradient-text">Success!</p>
+            </div>
+            <p class="span"><span></span>Profile updated!</p>
+        </div>
+        
+
+        <app-footer></app-footer>
+    </div>
+</section>
+
+

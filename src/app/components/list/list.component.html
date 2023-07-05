@@ -1,0 +1,27 @@
+<section>
+    <div class="container">
+        <app-toggle></app-toggle>
+        <div class="list">
+            <h1>Find Your Next Employee!</h1>
+
+            <div *ngFor="let x of this.service.jobprofilesMap | keyvalue" class="card">
+                <div class="flex">
+                    <p class="intro">{{x.value.introduction}}</p>
+                    <div class="city">
+                        <p>{{x.value.city}}</p>
+                    </div>
+                </div>
+                <div class="skills">
+                    <p *ngFor="let s of makeArray(x.value.skills)" class="skill">{{s}}</p>
+                </div>
+                <div class="line"></div>
+                <div class="owner flex">
+                    <p>Recruiter: {{x.value.user.userName }}</p>
+                    <a href="mailto:{{x.value.user.email}}"><fa-icon [icon]="faEnvelope"></fa-icon></a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <app-footer></app-footer>
+</section>

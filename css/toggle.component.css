@@ -1,0 +1,10 @@
+.toggle {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+}
+.toggle fa-icon {
+  font-size: 1.5rem;
+  color: var(--text);
+  cursor: pointer;
+}/*# sourceMappingURL=toggle.component.css.map */

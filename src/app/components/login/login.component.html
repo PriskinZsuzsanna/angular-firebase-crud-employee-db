@@ -1,0 +1,23 @@
+<section>
+    <div class="container">
+        <app-toggle></app-toggle>
+        <div *ngIf="!this.auth.showLoggedOut" class="form">
+
+            <h1>Login</h1>
+            <p *ngIf="site" style="text-align:center; margin-bottom: 2rem">To use '{{site}}' you have to login first!</p>
+           <div class="form-group">
+               <button (click)="login()">Login with Google</button>
+           </div>
+            
+        </div>
+
+        <div *ngIf="this.auth.showLoggedOut" class="show-if-logged-out" [ngClass]="{'logged-out': this.auth.showLoggedOut}">
+            <div class="gradient-container">
+                <p class="gradient-text">Success!</p>
+            </div>
+            <p class="span"><span></span>You Logged Out!</p>
+        </div>
+    </div>
+    <app-footer></app-footer>
+</section>
+

@@ -1,0 +1,4 @@
+<div class="toggle">
+    <fa-icon (click)="toggle()" *ngIf="!isDark" [icon]="faMoon"></fa-icon>
+    <fa-icon (click)="toggle()" *ngIf="isDark" [icon]="faSun"></fa-icon>
+</div>

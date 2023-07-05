@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "angular-employee-db": {
+      "hosting": {
+        "firebase-angular-job-page": [
+          "angular-employee-db"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "angular-employee-db"
+  }
+}

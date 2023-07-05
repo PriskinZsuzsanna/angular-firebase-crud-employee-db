@@ -1,0 +1,157 @@
+@import '../../src/styles/variables';
+
+.list {
+    padding-block: 3rem;
+    width: 100%;
+    color: var(--bg);
+
+    @media screen and (max-width: 700px){
+        padding: 2rem 0;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 2em;
+        margin-bottom: 5rem;
+    }
+
+
+    .card,
+    .dashboard-card {
+        width: 100%;
+        background: var(--bg);
+        border-radius: 2rem;
+        padding: 1.5rem;
+        color: var(--text-on-bg);
+        font-weight: 600;
+        margin-bottom: 2rem;
+
+        .flex {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+
+            .intro {
+                width: 70%;
+                @media screen and (max-width: 540px){
+                    padding-top: .8rem;
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+
+            .city {
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                position: absolute;
+                right: 0;
+
+                p {
+                    translate: 2.5rem -.5rem;
+                    padding: .5rem 2rem;
+                    background: var(--color);
+                    color: var(--bg);
+                    font-weight: 600;
+                    border-radius: 1rem;
+                    box-shadow: 1px 2px 3px var(--bg);
+                    transition: $transition;
+
+                    @media screen and (max-width: 540px){
+                        translate: 2rem -2.5rem;
+                    }
+                }
+
+                &:hover p{
+                    background: var(--bg);
+                    border: 1px solid var(--primary);
+                    color: var(--primary);
+                }
+            }
+        }
+
+        .skills {
+            width: 70%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: center;
+            padding-block: 1rem;
+            gap: 1rem;
+            @media screen and (max-width: 540px){
+                width: 100%;
+                justify-content: center;
+            }
+
+            .skill {
+                padding: .5rem 1rem;
+                border-radius: 1rem;
+                background: var(--color);
+                border: 1px solid var(--bg);
+                color: var(--bg);
+                transition: $transition;
+
+                &:hover{
+                    background: var(--bg);
+                    border: 1px solid var(--primary);
+                    color: var(--primary);
+                }
+            }
+
+        }
+
+        .line {
+            height: 3px;
+            background: var(--color);
+            margin-block: 2rem;
+            position: relative;
+
+            .icons {
+                position: absolute;
+                right: 10%;
+                translate: 0 -50%;
+                display: flex;
+                gap: 1rem;
+
+                fa-icon {
+                    padding: .7rem 1rem;
+                    border-radius: 1rem;
+                    background: var(--bg);
+                    color: var(--primary);
+                    border: 1px solid var(--primary);
+                    transition: $transition;
+                }
+                fa-icon:hover {
+                    background: var(--color);
+                    color: var(--text);
+                    border: 1px solid transparent;
+                }
+            }
+
+    
+        }
+
+        fa-icon {
+            font-size: 1.5em;
+            color: var(--bg);
+            background: var(--color);
+            border: 1px solid var(--bg);
+            padding: .5rem .8rem;
+            border-radius: 1rem;
+            cursor: pointer;
+            transition: $transition;
+
+            &:hover {
+                color: var(--primary);
+                background: var(--bg);
+                border: 1px solid var(--primary);
+            }
+        }
+    }
+
+    .card:nth-last-of-type(1){
+        margin-bottom: 0;
+    }
+}

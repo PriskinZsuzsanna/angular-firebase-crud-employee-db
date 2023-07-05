@@ -1,0 +1,41 @@
+@import '../../../styles/variables';
+
+footer {
+    z-index: 100;
+
+    .social {
+        z-index: 100;
+        padding-block: 4rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+    
+        fa-icon {
+            font-size: 2rem;
+            border-radius: 50%;
+            color: var(--text-on-bg);
+            scale: 1;
+            cursor: pointer;
+            translate: 0 0;
+            transition: $transition;
+    
+            &:hover {
+                scale: 1.1;
+                color: $text;
+                translate: 0 3px;
+            }
+        }
+
+        @media screen and (max-width: 700px){
+            padding-block: 1rem 3rem;
+            background: transparent;
+        }
+
+      
+    }
+}
+
+footer.open {
+    display: none;
+}

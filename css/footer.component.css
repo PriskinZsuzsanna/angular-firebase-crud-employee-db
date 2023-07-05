@@ -1,0 +1,59 @@
+body {
+  --bg: rgba(209, 248, 248, 0.8941176471);
+  --text: #fff;
+  --text-on-bg:rgba(48, 49, 49, 0.8941176471);
+  --color: linear-gradient(90deg, #2bdef2, #4781f6);
+  --color-alpha: linear-gradient(90deg, rgba(43, 222, 242, 0.8549019608), rgba(71, 129, 246, 0.6392156863));
+  --gradient: linear-gradient(90deg, #2bdef2 30%, #a2d9e2 40%, #4781f6);
+  --gradient-2: linear-gradient(180deg, #2bdef2, #a2d9e2, #4781f6);
+  --gradient-3: linear-gradient(180deg, #49f5db, #a2d9e2, #4781f6);
+  --primary: rgba(71, 129, 246, 0.8823529412);
+}
+
+body.dark {
+  --bg: rgba(48, 49, 49, 0.8941176471);
+  --text: #fff;
+  --text-on-bg: #fff;
+  --color: linear-gradient(90deg, #2bb3f2, #49f5db);
+  --color-alpha: linear-gradient(90deg, rgba(43, 179, 242, 0.6941176471), rgba(73, 245, 219, 0.8392156863));
+  --gradient: linear-gradient(90deg, #2bdef2 30%, #a2d9e2 40%, #49f5db);
+  --gradient-2: linear-gradient(180deg, #2bdef2, #a2d9e2, #49f5db);
+  --gradient-3: linear-gradient(180deg, #49f5db, #a2d9e2, #2bdef2);
+  --primary: #49f5db;
+}
+
+footer {
+  z-index: 100;
+}
+footer .social {
+  z-index: 100;
+  padding-block: 4rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+footer .social fa-icon {
+  font-size: 2rem;
+  border-radius: 50%;
+  color: var(--text-on-bg);
+  scale: 1;
+  cursor: pointer;
+  translate: 0 0;
+  transition: all 0.3s ease-in-out;
+}
+footer .social fa-icon:hover {
+  scale: 1.1;
+  color: #fff;
+  translate: 0 3px;
+}
+@media screen and (max-width: 700px) {
+  footer .social {
+    padding-block: 1rem 3rem;
+    background: transparent;
+  }
+}
+
+footer.open {
+  display: none;
+}/*# sourceMappingURL=footer.component.css.map */

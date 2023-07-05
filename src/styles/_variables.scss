@@ -1,0 +1,57 @@
+//dark
+$d-bg : #303131e4;
+$d-text: #fff;
+$d-text-on-bg: #fff;
+$d-color: linear-gradient(90deg, #2bb3f2, #49f5db);
+$d-color-alpha: linear-gradient(90deg, #2bdef2da, #49f5dbd6);
+$d-color-alpha: linear-gradient(90deg, #2bb3f2b1, #49f5dbd6);
+$d-gradient: linear-gradient(90deg, #2bdef2 30%, #a2d9e2 40%, #49f5db);
+$d-gradient-2: linear-gradient(180deg, #2bdef2, #a2d9e2, #49f5db);
+$d-gradient-3: linear-gradient(180deg, #49f5db, #a2d9e2, #2bdef2);
+$d-primary : #49f5db;
+
+//light
+
+$bg : #d1f8f8e4;
+$text: #fff;
+$text-on-bg: #303131e4;
+$color: linear-gradient(90deg, #2bdef2, #4781f6);
+$color-alpha: linear-gradient(90deg, #2bdef2da, #4781f6a3);
+$gradient: linear-gradient(90deg, #2bdef2 30%, #a2d9e2 40%, #4781f6);
+$gradient-2: linear-gradient(180deg, #2bdef2, #a2d9e2, #4781f6);
+$gradient-3: linear-gradient(180deg, #49f5db, #a2d9e2, #4781f6);
+$primary : #4781f6e1;
+
+$transition: all .3s ease-in-out;
+
+@mixin dark(){
+    --bg: #{$d-bg};
+    --text: #{$d-text};
+    --text-on-bg: #{$d-text-on-bg};
+    --color: #{$d-color};
+    --color-alpha: #{$d-color-alpha};
+    --gradient: #{$d-gradient};
+    --gradient-2: #{$d-gradient-2};
+    --gradient-3: #{$d-gradient-3};
+    --primary: #{$d-primary};
+};
+
+@mixin light(){
+    --bg: #{$bg};
+    --text: #{$text};
+    --text-on-bg:#{$text-on-bg};
+    --color: #{$color};
+    --color-alpha: #{$color-alpha};
+    --gradient: #{$gradient};
+    --gradient-2: #{$gradient-2};
+    --gradient-3: #{$gradient-3};
+    --primary: #{$primary};
+};
+
+body {
+    @include light()
+}
+
+body.dark {
+    @include dark()
+}
