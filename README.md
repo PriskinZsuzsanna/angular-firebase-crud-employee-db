@@ -18,4 +18,5 @@ CRUD - Angular - Firebase
 https://angular-employee-db.web.app/
 
 ### Screenshot
-![empoyee](https://github.com/PriskinZsuzsanna/angular-firebase-crud-employee-db/assets/121173949/5e7ec6aa-6b18-44c0-9166-8da925500a44)
+
+![employee2](https://github.com/PriskinZsuzsanna/angular-firebase-crud-employee-db/assets/121173949/4a9599bb-ff1e-409f-bc0d-3a05ec33e0f9)
